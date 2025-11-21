@@ -9,7 +9,53 @@ import java.util.Set;
 
 public class productCatalogue {
 	
+	
+	public static void creatingObject(int a, int b) {
+		int c = a*b;
+		System.out.println(c);
+	}
+	
+   public static List<Integer> creatingArrayList(){
+	 //Array List Example
+	 		List<Integer> integers = new ArrayList<Integer>();
+	 		integers.add(1);
+	 		integers.add(2);
+	 		integers.add(1);
+	 		return integers;		
+   }
+   
+   public static Set<Integer> setExample(){
+	   Set<Integer> integers2 = new HashSet<Integer>();
+		integers2.add(1);
+		integers2.add(2);
+		integers2.add(1);
+		return integers2;
+   }
+	
+   public static List<Integer> linkedListExample(){
+	 //LinkedListExample 
+	 		List<Integer> sampleLinkedList = new LinkedList<Integer>();
+	 		sampleLinkedList.add(1);
+	 		sampleLinkedList.add(10);
+	 		sampleLinkedList.addFirst(20);
+	 		sampleLinkedList.addLast(30);
+	 		sampleLinkedList.remove(1);
+	 		return sampleLinkedList;
+   }
+   
+   public static Set<Integer> linkedHashSetExample(){
+	 //Linked HashSet Example
+	 		Set<Integer> integers3 = new LinkedHashSet<Integer>();
+	 		integers3.add(10);
+	 		integers3.add(15);
+	 		integers3.add(9);
+	 		return integers3;
+   }
+	
+	
+	
 	public static void main(String[] args) {
+		creatingObject(1, 2);
 		Product product = new Product();
 		product.setProductId(1);
 		product.setPrice(10000);
@@ -51,37 +97,16 @@ public class productCatalogue {
 		}
 		
 		
-		//Array List Example
-		List<Integer> integers = new ArrayList<Integer>();
-		integers.add(1);
-		integers.add(2);
-		integers.add(1);
+		List<Integer> integers = creatingArrayList();
 		System.out.println(integers);
 		
-		//HashSet Example 
-		Set<Integer> integers2 = new HashSet<Integer>();
-		integers2.add(1);
-		integers2.add(2);
-		integers2.add(1);
-		System.out.println("This is hashSet result"+ integers2);
-		
-		//LinkedListExample 
-		List<Integer> sampleLinkedList = new LinkedList<Integer>();
-		sampleLinkedList.add(1);
-		sampleLinkedList.add(10);
-		sampleLinkedList.addFirst(20);
-		sampleLinkedList.addLast(30);
-		sampleLinkedList.remove(1);
-		System.out.println("Linked List output value"+ sampleLinkedList);
-		
-		//Linked HashSet Example
-		Set<Integer> integers3 = new LinkedHashSet<Integer>();
-		integers3.add(10);
-		integers3.add(15);
-		integers3.add(9);
-		System.out.println("The output value for Linked hashset is"+ integers3);
+		System.out.println("This is hashSet result"+ setExample());
 		
 		
+		System.out.println("Linked List output value"+ linkedListExample());
+		
+		
+		System.out.println("The output value for Linked hashset is"+ linkedHashSetExample());
 		
 				
 	}
