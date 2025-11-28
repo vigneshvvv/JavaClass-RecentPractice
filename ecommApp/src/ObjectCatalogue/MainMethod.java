@@ -27,8 +27,9 @@ public class MainMethod {
 		Reactions reactions = new Reactions();
 		reactions.setLikes(100);
 		reactions.setDislikes(100);
+		PostActions actions2 = generatepostActions(1, "new", 100, 12344, tags, reactions);
+		actions.add(actions2);
 		
-		actions.add(generatepostActions(1, "new", 100, 12344, tags, reactions));
 		 posts.setPosts(actions);
 		 return posts;
 	
