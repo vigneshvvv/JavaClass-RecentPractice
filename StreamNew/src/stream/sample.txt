@@ -1,0 +1,3 @@
+Hello
+This is text file example.
+line 3 here.
